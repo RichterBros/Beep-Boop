@@ -1,77 +1,41 @@
 $(document).ready(function(){
-var finalNumber =[]
-var result =[]
-var numberGreater = []
-var userInput = 25
+var counter = 0
 var userNums = []
-var userNum = [];
-var newTest = []
-var test =[]
-var res = []
-var separateNums =[]
-var output = []
-var numPair1 =[]
-var numPair2 =[]
-var userNumsClone = []
-//this grabs the user inputted number and count up to the user number from 10
-var stringNumSolid =[]
-for (i =10; i < userInput ; i++){
+var userStr=""
+var x=0
+var s=0
+var userInput = 25
+ var strList = []
+//this grabs the user inputted number and count up to the user number from 0
+
+for (i =0; i < userInput ; i++){
   
   userNums.push(i);
+  userStr = userNums[i].toString();
+  strList.push(userStr)
+
 }
 
-console.log(userNums)
-    
-
-//this takes the numbers and converts them to a string:
-
-userNums.forEach(function(num){
-      
-     test.push(num);
-        
-     
-     stringNums = test.toString()
-      
-        
-    stringNumSolid = stringNums.split(',').join("");
-        
-    });
-    
-    
-    //this is cloning stringNumSolid array to work with two numbers at a time:
-    
-    console.log(stringNumSolid)
-    var strTest = []  
-    var numOne = [] 
-    var wordArr = []
-    var ifTest = "no"
-    var testSliced = []
-    
-    numOne= test.shift();
-    testSliced= numOne.toString()
-    console.log(test)
-    console.log(numOne)
-    console.log(testSliced)
-    
-    //console.log(stringNumSolid)
-    if (testSliced[0] ==="3" && testSliced[1]!=="3"){
-      ifTest = "im sry"
-    } else if(testSliced[0] ==="2" && testSliced[1]!=="3"){
-      ifTest = "boop"
-    } else if (testSliced[0] ==="1"){
-      ifTest = "beep"
-    } else {
-
+for(c=0; c<userInput; c++ ){
+  x=strList[c]
+  for(c2=0; c2<x.length; c2++ )
+    if(x[c2]==='3'){
+      strList[c]="imsry"
     }
-    
-    console.log(ifTest)
-    //for (i = 0 ; i < 3 ; i++){
+    else if(x[c2]==='2'){
+      strList[c]="boop"
+    }
+    else if(x[c2]==='1'){
+      strList[c]="beep"
+    }
+}
+  
+console.log(strList)
 
-           //strTest[i] = stringClone.shift();
     
-    
-          
-    
+   
+
+
     
     
  
@@ -85,15 +49,5 @@ userNums.forEach(function(num){
 
    
    
-
-
-
-
-
-
-
-
-
-
 
 });
