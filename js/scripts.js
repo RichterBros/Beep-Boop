@@ -1,7 +1,7 @@
 $(document).ready(function(){
-
-
-
+var finalNumber =[]
+var result =[]
+var numberGreater = []
 var userInput = 25
 var userNums = []
 var userNum = [];
@@ -12,12 +12,10 @@ var separateNums =[]
 var output = []
 var numPair1 =[]
 var numPair2 =[]
+var userNumsClone = []
 //this grabs the user inputted number and count up to the user number from 10
 var stringNumSolid =[]
 for (i =10; i < userInput ; i++){
-  
-  
-  
   
   userNums.push(i);
 }
@@ -25,62 +23,68 @@ for (i =10; i < userInput ; i++){
 console.log(userNums)
     
 
-//this takes the numbers and converts them to one string:
+//this takes the numbers and converts them to a string:
 
 userNums.forEach(function(num){
       
      test.push(num);
-        stringNums = test.toString()
-      
-        stringNumSolid = stringNums.split(',').join('');
-        //result = Math.max([i], [i]);
+        
      
+     stringNums = test.toString()
+      
+        
+    stringNumSolid = stringNums.split(',').join("");
+        
     });
-      
-      console.log(stringNumSolid)
-      //this takes the string and separates the numbers:
-      var number = stringNumSolid,
-      outputs = [],
-      sNumber = number.toString();
-  
-  for (var i = 0, len = sNumber.length; i < len; i += 1) {
-      output.push(+sNumber.charAt(i));
-  }
-  
-     //here are the individual numbers separated: 
-  console.log(output)
-      
+    
+    
+    //this is cloning stringNumSolid array to work with two numbers at a time:
+    
+    console.log(stringNumSolid)
+    var strTest = []  
+    var numOne = [] 
+    var wordArr = []
+    var ifTest = "no"
+    var testSliced = []
+    
+    numOne= test.shift();
+    testSliced= numOne.toString()
+    console.log(test)
+    console.log(numOne)
+    console.log(testSliced)
+    
+    //console.log(stringNumSolid)
+    if (testSliced[0] ==="3" && testSliced[1]!=="3"){
+      ifTest = "im sry"
+    } else if(testSliced[0] ==="2" && testSliced[1]!=="3"){
+      ifTest = "boop"
+    } else if (testSliced[0] ==="1"){
+      ifTest = "beep"
+    } else {
 
-//here is where we get the first two numbers:
+    }
+    
+    console.log(ifTest)
+    //for (i = 0 ; i < 3 ; i++){
 
-  numPair1 = output.shift();
-
-console.log(numPair1)
+           //strTest[i] = stringClone.shift();
+    
+    
+          
+    
+    
+    
  
-numPair2 = output.shift();
 
-console.log(numPair2)
-result = Math.max(numPair1, numPair2);
-      console.log(result)
-   //this will be used to replace the numbers with words: 
-      var mapObj = {
-        1:"beep",
-        2:"boop",
-        3:"sry"
-     };
-     res = stringNums.replace(/1|2|3/gi, function(matched){
-       return mapObj[matched];
-     });
-     
-     
-     
-     
-      console.log(res)
+
+    
+ 
+      
+
+
 
    
-
-   //this will be used to find the greater of the two numbers once isolated
-  //result = Math.max(5, 6);
+   
 
 
 
