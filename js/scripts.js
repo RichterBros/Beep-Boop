@@ -1,26 +1,7 @@
 $(document).ready(function(){
 
 
-// var userInput = 24;
-// var userNumberRange =[];
-// var numberOne = "Beep!";
-// var numberTwo = "Boop!";
-// var numberThree = "I'm sorry dave, I can't do that."
 
-
-// for (i = 0 ; i <= userInput ; i++){
-
-//   userNumberRange.push(i);
-  
-// }
-
-// itemCopy.forEach(function(word){
-//   if (word.length ===2){
-//     test.push(word);
-//   }
-
-
-// });
 var userInput = 25
 var userNums = []
 var userNum = [];
@@ -42,20 +23,38 @@ for (i =0 ; i < userInput ; i++){
       
         
         
-      //newTest.push(res)
+     
     
-      
+     
       
       });
-      var res = stringNums.replace("1", "Beep!");
+      
+      console.log(stringNums)
+      //var res = stringNums.replace(/1/g, "Beep!");
     
-      console.log(res)
+      var mapObj = {
+        1:"beep",
+        2:"boop",
+        3:"sry"
+     };
+     res = stringNums.replace(/1|2|3/gi, function(matched){
+       return mapObj[matched];
+     });
+     
+     
+     
+     
+      //console.log(res)
 
    
-  
-    //$(this).index()
-
-
+  // var i = 5;
+  // var x = 6
+  //  var result = 0 
+   
+  //      result = Math.max(5, 6);
+     
+  //      console.log(result)
+      
 
 
 
