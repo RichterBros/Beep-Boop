@@ -1,4 +1,15 @@
 $(document).ready(function(){
+
+
+
+
+
+
+
+
+
+
+
 var userNums = []
 var strList = []
 var userStr=""
@@ -21,7 +32,7 @@ for(c=0; c<userInput; c++ ){
  // the second part of the loop is another loop that checks each position in x, or which individual digit you are on in the x string or "number". For example, if the x number has a three in it, it changes that number in the list of strings (numbers) to the string "imsry". (c2 goes through each digit inside the number until it is finished with the full length of the number.)
 
   for(c2=0; c2<x.length ; c2++ ){
-    if(x[c2]==='3' || x[c2,1] ===("3")){
+    if(x[c2].includes("3") ){
       strList[c]="imsry"
     }
     else if(x[c2]==='2'){
