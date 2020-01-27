@@ -18,12 +18,13 @@ var userNums = []
 var strList = []
 var userStr=""
 var x=0
-var userInput = parseInt($("input#number").val());
+
+var userInput = parseInt($("input#number").val()) +1;
 console.log(userInput)
 //counts up to the user input, pushes the counter to the number list each time through the loop, and converts each number into a string, then adds it to a list of string "numbers"
 
 for (i =0; i < userInput ; i++){
-  userNums.push(i+1);
+  userNums.push(i);
   userStr = userNums[i].toString();
   strList.push(userStr)
 }
