@@ -19,13 +19,13 @@ for (i =0; i < userInput ; i++){
   userStr = userNums[i].toString();
   strList.push(userStr)
 }
-
+console.log(strList)
 //This first part of the loop checks which "number", or string you are currently on in the list and records that as the x variable.
 
 for(c=0; c<userInput; c++ ){
   x=strList[c]
 
- // the second part of the loop is another loop that checks each position in x, or which individual digit you are on in the x string or "number". For example, if the x number has a three in it, it changes that number in the list of strings (numbers) to the string "imsry". (c2 goes through each digit inside the number until it is finished with the full length of the number.)
+ // the second part of the loop is another loop that checks each position in x, or which individual digit you are on in the x string or "number". For example, if the x number has a three in it, it changes that number in the list of strings (numbers) to the string "I'm sorry, Dave. I'm afraid I can't do that.". (c2 goes through each digit inside the number until it is finished with the full length of the number.)
 
 for(c2=0; c2<x.length ; c2++ ){
   if(x[c2].includes("3") ){
