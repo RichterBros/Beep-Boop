@@ -1,18 +1,9 @@
 $(document).ready(function(){
 
-  
-  
-  $(".btn").click(function() {
+$(".btn").click(function() {
     
-    event.preventDefault();  
+event.preventDefault();  
     
-
-
-
-    
-    
-
-
 var text = "";
 var userNums = []
 var strList = []
@@ -36,22 +27,18 @@ for(c=0; c<userInput; c++ ){
 
  // the second part of the loop is another loop that checks each position in x, or which individual digit you are on in the x string or "number". For example, if the x number has a three in it, it changes that number in the list of strings (numbers) to the string "imsry". (c2 goes through each digit inside the number until it is finished with the full length of the number.)
 
-  for(c2=0; c2<x.length ; c2++ ){
-    if(x[c2].includes("3") ){
-      strList[c]="imsry"
+for(c2=0; c2<x.length ; c2++ ){
+  if(x[c2].includes("3") ){
+  strList[c]="I'm sorry, Dave. I'm afraid I can't do that."
     }
     else if(x[c2]==='2'){
-      strList[c]="boop"
+    strList[c]="boop"
     }
     else if(x[c2]==='1'){
-      strList[c]="beep"
+    strList[c]="beep"
     }
   }
 } 
-
-
-
 $("#output").text(strList);
-   });
-  
+  });
 });
