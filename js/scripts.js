@@ -1,25 +1,29 @@
 $(document).ready(function(){
 
+  
+  
+  $(".btn").click(function() {
+    
+    event.preventDefault();  
+    
 
 
 
+    
+    
 
 
-
-
-
-
-
+var text = "";
 var userNums = []
 var strList = []
 var userStr=""
 var x=0
-var userInput = 223 +1
-
+var userInput = parseInt($("input#number").val());
+console.log(userInput)
 //counts up to the user input, pushes the counter to the number list each time through the loop, and converts each number into a string, then adds it to a list of string "numbers"
 
 for (i =0; i < userInput ; i++){
-  userNums.push(i);
+  userNums.push(i+1);
   userStr = userNums[i].toString();
   strList.push(userStr)
 }
@@ -44,23 +48,9 @@ for(c=0; c<userInput; c++ ){
   }
 } 
 
-console.log(strList)
 
 
-
-   
-
- 
-
+$("#output").text(strList);
+   });
   
-
-
-
-
-
-
-
-
-
-
 });
